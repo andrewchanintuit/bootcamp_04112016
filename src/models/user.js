@@ -1,11 +1,10 @@
 export default class {
 	constructor(user) {
-		console.log('user');
-		console.log(user);
 		this.id = user.id;
 		this.name = user.name;
 		this.firstName = user.firstName;
 		this.lastName = user.lastName;
+		this.title = user.title;
 		this.email = user.email;
 		this.widgets = [];
 	}

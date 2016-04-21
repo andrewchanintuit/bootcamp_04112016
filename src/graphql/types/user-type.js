@@ -10,26 +10,26 @@ export const userType = new GraphQLObjectType({
 	name: 'User',
 	description: 'A user',
 	fields: () => ({
-		id:globalIdField('User'),
+		id: globalIdField('User'),
 		name: {
 			type: GraphQLString,
 			description: 'The user name'
 		},
 		firstName: {
 			type: GraphQLString,
-			description: 'The user name'
-		},
-		email: {
-			type: GraphQLString,
-			description: 'The user name'
+			description: 'The user first name'
 		},
 		lastName: {
 			type: GraphQLString,
-			description: 'The user name'
+			description: 'The user last name'
 		},
 		title: {
 			type: GraphQLString,
-			description: 'The user name'
+			description: 'The user title'
+		},
+		email: {
+			type: GraphQLString,
+			description: 'The user email'
 		},
 		widgets: {
 			type: widgetConnection,
