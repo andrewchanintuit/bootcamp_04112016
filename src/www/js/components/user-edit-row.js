@@ -57,6 +57,4 @@ export default class EditRow extends React.Component {
 		</tr>;
 
 	}
-
-
 }

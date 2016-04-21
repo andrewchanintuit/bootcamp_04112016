@@ -1,6 +1,6 @@
 import React from 'react';
-import ViewRowComponent from './widget-view-row';
-import EditRowComponent from './widget-edit-row';
+import WidgetViewRowComponent from './widget-view-row';
+import WidgetEditRowComponent from './widget-edit-row';
 
 export default props => <table className="table table-inverse">
 	<thead>
@@ -16,11 +16,12 @@ export default props => <table className="table table-inverse">
 	</thead>
 	<tbody>
 		{props.widgets.edges.map(edge => props.editWidgetId === edge.node.id
-			? <EditRowComponent colorList={props.colorList} sizeList={props.sizeList}
+			? <WidgetEditRowComponent colorList={props.colorList} sizeList={props.sizeList}
 				userList={props.userList} key={edge.node.id} widget={edge.node}
 				onSave={props.onSave} onCancelEdit={props.onCancelEdit} />
-		: <ViewRowComponent key={edge.node.id} widget={edge.node}
-			onEdit={props.onEdit} onDelete={props.onDelete} />)}
-		<EditRowComponent colorList={props.colorList} sizeList={props.sizeList} userList={props.userList} onSave={props.onSave} key="-1" />
+			: <WidgetViewRowComponent key={edge.node.id} widget={edge.node}
+				onEdit={props.onEdit} onDelete={props.onDelete} />)
+		}
+		<WidgetEditRowComponent colorList={props.colorList} sizeList={props.sizeList} userList={props.userList} onSave={props.onSave} key="-1" />
 	</tbody>
 </table>;

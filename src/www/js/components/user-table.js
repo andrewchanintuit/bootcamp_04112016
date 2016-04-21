@@ -1,6 +1,6 @@
 import React from 'react';
-import ViewRowComponent from './user-view-row';
-import EditRowComponent from './user-edit-row';
+import UserViewRowComponent from './user-view-row';
+import UserEditRowComponent from './user-edit-row';
 
 export default props => <table className="table table-inverse">
 	<thead>
@@ -14,9 +14,9 @@ export default props => <table className="table table-inverse">
 	</thead>
 	<tbody>
 		{props.users.edges.map(edge => props.editUserId === edge.node.id
-			? <EditRowComponent key={edge.node.id} user={edge.node} onSave={props.onSave} onCancelEdit={props.onCancelEdit} />
-			: <ViewRowComponent key={edge.node.id} user={edge.node} onEdit={props.onEdit} onDelete={props.onDelete} />)
+			? <UserEditRowComponent key={edge.node.id} user={edge.node} onSave={props.onSave} onCancelEdit={props.onCancelEdit} />
+			: <UserViewRowComponent key={edge.node.id} user={edge.node} onEdit={props.onEdit} onDelete={props.onDelete} />)
 		}
-		<EditRowComponent onSave={props.onSave} key="-1" />
+		<UserEditRowComponent onSave={props.onSave} key="-1" />
 	</tbody>
 </table>;
