@@ -19,6 +19,18 @@ export const userType = new GraphQLObjectType({
 			type: GraphQLString,
 			description: 'The user name'
 		},
+		email: {
+			type: GraphQLString,
+			description: 'The user name'
+		},
+		lastName: {
+			type: GraphQLString,
+			description: 'The user name'
+		},
+		title: {
+			type: GraphQLString,
+			description: 'The user name'
+		},
 		widgets: {
 			type: widgetConnection,
 			description: 'A list of widgets',

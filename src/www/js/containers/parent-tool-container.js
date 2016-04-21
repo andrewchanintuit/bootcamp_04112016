@@ -21,6 +21,10 @@ export default Relay.createContainer(ParentToolComponent, {
 						node {
 							id
 							name
+							firstName
+							lastName
+							title
+							email
 						}
 					}
 				}
