@@ -8,7 +8,6 @@ import ViewerRoute from './routes/viewer-route';
 
 
 ReactDOM.render(
-	<Relay.RootContainer Component={UserToolContainer} route={new ViewerRoute()} />,
-	<Relay.RootContainer Component={WidgetToolContainer} route={new ViewerRoute()} />,
+	<Relay.RootContainer Component={UserToolContainer, WidgetToolContainer} route={new ViewerRoute()} />,
 	document.querySelector('main')
 );

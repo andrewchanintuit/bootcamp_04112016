@@ -2,7 +2,7 @@ import { GraphQLObjectType } from 'graphql';
 import { globalIdField, connectionArgs, connectionFromPromisedArray } from 'graphql-relay';
 import { nodeInterface } from '../node-definitions';
 import { registerType } from '../resolve-type';
-import { getUsers, getWidgets, getViewer, getUsersFromUser } from '../../database';
+import { getWidgets, getViewer, getUsersFromUser } from '../../database';
 import Viewer from '../../models/viewer';
 import { widgetConnection } from '../connections/widget-connection';
 import { userConnection } from '../connections/user-connection';

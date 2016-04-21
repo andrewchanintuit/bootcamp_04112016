@@ -44,16 +44,13 @@ export default class extends Relay.Mutation {
 		// name of the 'payload' is derived from the mutation name,
 		// with the first work of the mutation name being capitalized
 		return Relay.QL`
-			fragment on UpdateWidgetPayload @relay(pattern: true) {
+			fragment on UpdateUserFromUserPayload @relay(pattern: true) {
 				viewer {
 					users {
 						edges {
 							node {
 								id
-								firstName
-								lastName
-								title
-								email
+								name
 							}
 						}
 					}

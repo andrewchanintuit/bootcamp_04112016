@@ -1,6 +1,6 @@
 import {mutationWithClientMutationId, fromGlobalId, offsetToCursor } from 'graphql-relay';
 import {insertUserFromUserInputType } from './user-input-type';
-import {viewerType} from './viewer-type'
+import {viewerType} from './viewer-type';
 import {UserEdge} from  '../connections/user-connection';
 import {getViewer, getUsersFromUser, insertUserFromUser } from '../../database';
 

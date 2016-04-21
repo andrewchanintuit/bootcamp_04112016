@@ -1,6 +1,6 @@
 import {GraphQLID} from 'graphql';
 import {mutationWithClientMutationId, fromGlobalId} from 'graphql-relay';
-import {viewerType} from './viewer-type'
+import {viewerType} from './viewer-type';
 import {getViewer, deleteUserFromUser } from '../../database';
 
 export const deleteUserMutationType = mutationWithClientMutationId({
