@@ -48,17 +48,13 @@ export default class extends Relay.Mutation {
 		// corresponds to the structure of the output types
 		// patten is used to not specify the parameters for the connections
 		return Relay.QL`
-			fragment on InsertUserPayload @relay(pattern: true) {
+			fragment on InsertUserFromUserPayload @relay(pattern: true) {
 				viewer {
 					users {
 						edges {
 							node {
 								id
-								firstName
-								lastName
-								title
-								email
-							}
+								name							}
 						}
 					}
 				}
