@@ -54,7 +54,12 @@ export default class extends Relay.Mutation {
 						edges {
 							node {
 								id
-								name							}
+								name
+								firstName
+								lastName
+								title
+								email
+							}
 						}
 					}
 				}
