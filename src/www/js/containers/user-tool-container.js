@@ -2,7 +2,7 @@ import Relay from 'react-relay';
 import UserToolComponent from '../components/user-tool';
 import InsertUserMutation from '../mutations/insert-user-mutation';
 import UpdateUserMutation from '../mutations/update-user-mutation';
-import DeleteUserMutation from '../mutations/delete-user-mutation';
+//import DeleteUserMutation from '../mutations/delete-user-mutation';
 
 export default Relay.createContainer(UserToolComponent, {
 
@@ -15,16 +15,12 @@ export default Relay.createContainer(UserToolComponent, {
 					edges {
 						node {
 							id
-							firstName
-							lastName
-							title
-							email
+							name
 						}
 					}
 				}
 				${InsertUserMutation.getFragment('viewer')}
 				${UpdateUserMutation.getFragment('viewer')}
-				${DeleteUserMutation.getFragment('viewer')}
 			}
 		`
 	}

@@ -4,7 +4,7 @@ import BaseComponent from './base-component';
 import UserTableComponent from './user-table';
 import InsertUserMutation from '../mutations/insert-user-mutation';
 import UpdateUserMutation from '../mutations/update-user-mutation';
-import DeleteUserMutation from '../mutations/delete-user-mutation';
+// import DeleteUserMutation from '../mutations/delete-user-mutation';
 
 export default class UserTool extends BaseComponent {
 
@@ -51,9 +51,9 @@ export default class UserTool extends BaseComponent {
 	}
 
 	_deleteUser(user) {
-		Relay.Store.commitUpdate(new DeleteUserMutation(
-			{	viewer: this.props.viewer, user, userId: user.id }
-		));
+		// Relay.Store.commitUpdate(new DeleteUserMutation(
+		// 	{	viewer: this.props.viewer, user, userId: user.id }
+		// ));
 	}
 
 	render() {
