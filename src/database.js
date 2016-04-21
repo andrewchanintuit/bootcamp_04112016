@@ -1,5 +1,5 @@
 import WidgetModel from './mongoose/widget';
-import UserModel from './mongoose/widget';
+import UserModel from './mongoose/user';
 import Viewer from './models/viewer';
 import User from './models/user';
 import Widget from './models/widget';
@@ -18,7 +18,9 @@ export const getUsersFromUser = () => {
 				return;
 			}
 			resolve(results.map((result) => {
+				console.log('database'+ new User(result));
 				return new User(result);
+				// return result;
 			}));
 		});
 	});

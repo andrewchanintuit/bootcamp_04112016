@@ -4,7 +4,7 @@ import { nodeInterface } from '../node-definitions';
 import { widgetConnection } from '../connections/widget-connection';
 import { registerType } from '../resolve-type';
 import User from '../../models/user';
-import { getUserWidgets, getUser } from '../../database';
+import { getUserWidgets, getUser, getUserFromUser } from '../../database';
 
 export const userType = new GraphQLObjectType({
 	name: 'User',
@@ -12,6 +12,10 @@ export const userType = new GraphQLObjectType({
 	fields: () => ({
 		id:globalIdField('User'),
 		name: {
+			type: GraphQLString,
+			description: 'The user name'
+		},
+		firstName: {
 			type: GraphQLString,
 			description: 'The user name'
 		},
@@ -25,4 +29,4 @@ export const userType = new GraphQLObjectType({
 	interfaces: () => [nodeInterface]
 });
 
-registerType(User, userType, getUser);
+registerType(User, userType, getUserFromUser);
