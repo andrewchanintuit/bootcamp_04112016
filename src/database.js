@@ -59,7 +59,10 @@ export const insertUserFromUser = (user) => {
 	});
 };
 
-
+export const deleteUserFromUser = (id) =>
+	new Promise((resolve, reject) =>
+		UserModel.findByIdAndRemove(id, (err, results) =>
+				err ? reject(err) : resolve(results ? new User(results) : null)));
 /*
 	Get users from Widget table
 */
