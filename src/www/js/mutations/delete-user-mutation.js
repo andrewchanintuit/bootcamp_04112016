@@ -46,6 +46,10 @@ export default class extends Relay.Mutation {
 							node {
 								id
 								name
+								firstName
+								lastName
+								title
+								email
 							}
 						}
 					}
