@@ -6,6 +6,7 @@ import {getViewer, deleteUserFromUser } from '../../database';
 export const deleteUserMutationType = mutationWithClientMutationId({
 	//name of mutation
 	name : 'DeleteUserFromUser',
+
 	//input fields
 	inputFields: {
 		userId: {
@@ -13,21 +14,18 @@ export const deleteUserMutationType = mutationWithClientMutationId({
 		}
 	},
 
-
 	mutateAndGetPayload: ({userId}) => {
 		return deleteUserFromUser(fromGlobalId(userId).id);
 	},
 
-
-
 	outputFields: {
 		viewer: {
 			type: viewerType,
-			resolve: () =>getViewer(1)
+			resolve: () => getViewer(1)
 		},
 		userId : {
 			type: GraphQLID,
-			resolve: user =>user.id
+			resolve: user => user.id
 		}
 	}
 

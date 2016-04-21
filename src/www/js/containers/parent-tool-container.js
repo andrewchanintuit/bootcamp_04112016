@@ -3,7 +3,7 @@ import ParentToolComponent from '../components/parent-tool';
 import InsertUserMutation from '../mutations/insert-user-mutation';
 import DeleteUserMutation from '../mutations/delete-user-mutation';
 import UpdateUserMutation from '../mutations/update-user-mutation';
-// import DeleteUserMutation from '../mutations/delete-user-mutation';
+import DeleteUserMutation from '../mutations/delete-user-mutation';
 import InsertWidgetMutation from '../mutations/insert-widget-mutation';
 import UpdateWidgetMutation from '../mutations/update-widget-mutation';
 import DeleteWidgetMutation from '../mutations/delete-widget-mutation';

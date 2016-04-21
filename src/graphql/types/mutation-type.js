@@ -6,7 +6,6 @@ import {insertUserMutationType} from './insert-user-mutation';
 import {updateUserMutationType} from './update-user-mutation';
 import {deleteUserMutationType} from './delete-user-mutation';
 
-
 export const mutationType = new GraphQLObjectType({
 	name: 'Mutation',
 	fields: () => ({
