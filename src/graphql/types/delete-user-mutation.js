@@ -5,7 +5,7 @@ import {getViewer, deleteUserFromUser } from '../../database';
 
 export const deleteUserMutationType = mutationWithClientMutationId({
 	//name of mutation
-	name : 'deleteUserFromUser',
+	name : 'DeleteUserFromUser',
 	//input fields
 	inputFields: {
 		userId: {

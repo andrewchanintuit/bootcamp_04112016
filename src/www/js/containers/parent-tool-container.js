@@ -1,6 +1,7 @@
 import Relay from 'react-relay';
 import ParentToolComponent from '../components/parent-tool';
 import InsertUserMutation from '../mutations/insert-user-mutation';
+import DeleteUserMutation from '../mutations/delete-user-mutation';
 import UpdateUserMutation from '../mutations/update-user-mutation';
 //import DeleteUserMutation from '../mutations/delete-user-mutation';
 import InsertWidgetMutation from '../mutations/insert-widget-mutation';
@@ -49,6 +50,7 @@ export default Relay.createContainer(ParentToolComponent, {
 				${DeleteWidgetMutation.getFragment('viewer')}
 				${InsertUserMutation.getFragment('viewer')}
 				${UpdateUserMutation.getFragment('viewer')}
+				${DeleteUserMutation.getFragment('viewer')}
 			}
 		`
 	}
