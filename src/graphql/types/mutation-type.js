@@ -13,8 +13,8 @@ export const mutationType = new GraphQLObjectType({
 		insertWidget: insertWidgetMutationType,
 		updateWidget: updateWidgetMutationType,
 		deleteWidget: deleteWidgetMutationType,
-		insertUser: insertUserMutationType,
-		updateUser: updateUserMutationType,
-		deleteUser: deleteUserMutationType
+		insertUserFromUser: insertUserMutationType,
+		updateUserFromUser: updateUserMutationType,
+		deleteUserFromUser: deleteUserMutationType
 	})
 });

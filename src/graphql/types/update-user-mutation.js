@@ -6,7 +6,7 @@ import { getViewer, getUsersFromUser, updateUserFromUser } from '../../database'
 
 export const updateUserMutationType = mutationWithClientMutationId({
 	// name of the mutation
-	name: 'UpdateUserShark',
+	name: 'UpdateUserFromUser',
 
 	inputFields: {
 		user: {
