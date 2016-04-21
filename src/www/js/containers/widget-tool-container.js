@@ -7,7 +7,7 @@ import DeleteWidgetMutation from '../mutations/delete-widget-mutation';
 export default Relay.createContainer(WidgetToolComponent, {
 
 	fragments: {
-	
+
 		colors: () => Relay.QL`fragment on __Type { enumValues { name description } }`,
 		sizes: () => Relay.QL`fragment on __Type { enumValues { name description } }`,
 		viewer: () => Relay.QL`
@@ -41,7 +41,6 @@ export default Relay.createContainer(WidgetToolComponent, {
 				${UpdateWidgetMutation.getFragment('viewer')}
 				${DeleteWidgetMutation.getFragment('viewer')}
 			}
-		
 		`
 	}
 });

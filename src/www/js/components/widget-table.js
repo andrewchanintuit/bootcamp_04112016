@@ -1,6 +1,6 @@
 import React from 'react';
-import ViewRowComponent from './view-row';
-import EditRowComponent from './edit-row';
+import ViewRowComponent from './widget-view-row';
+import EditRowComponent from './widget-edit-row';
 
 export default props => <table className="table table-inverse">
 	<thead>
@@ -24,4 +24,3 @@ export default props => <table className="table table-inverse">
 		<EditRowComponent colorList={props.colorList} sizeList={props.sizeList} userList={props.userList} onSave={props.onSave} key="-1" />
 	</tbody>
 </table>;
-
