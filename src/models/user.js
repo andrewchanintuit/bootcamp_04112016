@@ -1,6 +1,6 @@
 export default class {
 	constructor(user) {
-		this.id = user.id;
+		this.id = user._id;
 		this.name = user.name;
 		this.firstName = user.firstName;
 		this.lastName = user.lastName;

@@ -7,7 +7,7 @@ export default class EditRow extends React.Component {
 
 		if (props.user) {
 			this.state = {
-				id: props.widget.id,
+				id: props.user.id,
 				firstName: props.user.firstName,
 				lastName: props.user.lastName,
 				title: props.user.title,

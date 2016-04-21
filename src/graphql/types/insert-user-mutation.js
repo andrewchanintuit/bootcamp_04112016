@@ -34,8 +34,6 @@ export const insertUserMutationType = mutationWithClientMutationId({
 	},
 
 	mutateAndGetPayload: ({user}) => {
-		//extract numeric owner id from global id
-		user.id = parseInt(fromGlobalId(user.id).id);
 		//save user with extracted ids
 		return insertUserFromUser(user);
 	}
