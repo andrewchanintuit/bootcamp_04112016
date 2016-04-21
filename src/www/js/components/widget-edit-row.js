@@ -43,6 +43,15 @@ export default class EditRow extends React.Component {
 			id: user.value,
 			name: user.label
 		} }));
+		this.setState({
+			id: -1,
+			name: '',
+			description: '',
+			color: '',
+			size: '',
+			quantity: 0,
+			ownerId: -1
+		});
 	}
 
 	render() {

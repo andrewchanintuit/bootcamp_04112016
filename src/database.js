@@ -9,7 +9,6 @@ export const getViewer = (id) => new Viewer({ id });
 /*
 		Get users from user collection
 */
-// get user from user collection
 export const getUsersFromUser = () => {
 	return new Promise((resolve, reject) => {
 		UserModel.find({}, (err, results) => {
@@ -18,9 +17,7 @@ export const getUsersFromUser = () => {
 				return;
 			}
 			resolve(results.map((result) => {
-				console.log('database'+ new User(result));
 				return new User(result);
-				// return result;
 			}));
 		});
 	});
@@ -63,6 +60,8 @@ export const deleteUserFromUser = (id) =>
 	new Promise((resolve, reject) =>
 		UserModel.findByIdAndRemove(id, (err, results) =>
 				err ? reject(err) : resolve(results ? new User(results) : null)));
+
+
 /*
 	Get users from Widget table
 */
